@@ -29,7 +29,7 @@ class Fire(nn.Module):
                                    kernel_size=1)
         self.expand1x1_bn = nn.BatchNorm3d(expand1x1_planes)
         self.expand3x3 = nn.Conv3d(squeeze_planes, expand3x3_planes,
-                                   kernel_size=3, padding=1)
+                                   kernel_size=3, padding=4)
         self.expand3x3_bn = nn.BatchNorm3d(expand3x3_planes)
 
     def forward(self, x):
